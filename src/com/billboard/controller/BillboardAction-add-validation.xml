@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator 1.0.2//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+
+<validators>
+	<field name="billboardVO.title">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param><!-- 預設為true -->
+			<message>員工姓名: 請勿空白</message>
+		</field-validator>
+	</field>
+
+
+	<field name="billboardVO.releaseDate">
+		<field-validator type="required">
+			<message>發佈日期: 請勿空白</message>
+		</field-validator>
+	</field>
+
+	<field name="billboardVO.deadlineDate">
+		<field-validator type="required">
+			<message>截止日期: 請勿空白</message>
+		</field-validator>
+	</field>
+	
+
+	<field name="billboardVO.content">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param><!-- 預設為true -->
+			<message>內容: 請勿空白</message>
+		</field-validator>
+	</field>
+
+</validators>

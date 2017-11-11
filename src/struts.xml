@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources" value="globalMessages" />
+	
+	<package name="billboard" namespace="/billboard" extends="struts-default">
+
+		<action name="add" class="com.billboard.controller.BillboardAction" method="add">
+			<result name="success" type="redirectAction">list</result>
+			<result name="input" >/billboard/add.jsp</result>
+		</action>
+		<action name="update" class="com.billboard.controller.BillboardAction" method="update">
+			<result name="success" type="redirectAction">list</result>
+			<result name="input" >/billboard/edit.jsp</result>
+		</action>
+		<action name="delete" class="com.billboard.controller.BillboardAction" method="delete">
+			<result name="success" type="redirectAction">list</result>
+		</action>
+		<action name="list" class="com.billboard.controller.BillboardAction" method="list">
+			<result name="success">/billboard/listAll.jsp</result>
+		</action>
+		<action name="findByNo" class="com.billboard.controller.BillboardAction" method="findByNo">
+			<result name="success">/billboard/edit.jsp</result>
+		</action>
+	</package>
+
+</struts>
